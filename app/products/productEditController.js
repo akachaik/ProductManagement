@@ -3,18 +3,21 @@
 
     angular
         .module("productManagement")
-        .controller("productEditController", ["productResource", productEditController]);
+        .controller("productEditController", ["product", productEditController]);
 
-    function productEditController(productResource) {
+    function productEditController(product) {
         var vm = this;
-        productResource.query(function (data) {
-            vm.products = data;
-        });
 
-        vm.showImage = false;
-        vm.toggleImage = function () {
-            vm.showImage = !vm.showImage;
-        };
+        vm.product = product;
+
+        if (vm.product && vm.product.productId) {
+            vm.title = "Edit : " + product.productName;
+        } else {
+
+            vm.title = "New Product";
+        }
+
+
 
     }
 
