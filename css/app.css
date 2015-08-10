@@ -26,6 +26,9 @@ form legend {
     text-shadow: 0 3px 0 #000000;
     text-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
 }
+.wizard {
+    min-height: 31px;
+}
 
 .wizard a {
     background-color: #efefef;
@@ -40,6 +43,7 @@ form legend {
     padding: 10px 40px 10px;
     position: relative;
     text-decoration: none;
+    
 }
 
 .wizard .active {
