@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+        Todo App
+    </title>
+    <style>
+        .done {
+            text-decoration: line-through;color: #ccc;
+        }
+
+        pre {
+            display: block;
+            padding: 9.5px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            line-height: 1.42857143;
+            color: #333;
+            -moz-word-break: break-all;
+            -o-word-break: break-all;
+            -ms-word-break: break-all;
+            word-break: break-all;
+            -ms-word-wrap: break-word;
+            word-wrap: break-word;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            -ms-border-radius: 4px;
+            border-radius: 4px;
+        }
+    </style>
+    <script src="Scripts/angular.js"></script>
+    <script>
+
+        var app = angular.module("app", []);
+        app.controller("todoController", function() {
+            var vm = this;
+            vm.newTodo = "";
+            vm.todos = [
+                { title: "Go shopping", done: false },
+                { title: "Clenup", done: true }
+            ];
+
+            vm.addTodo = function() {
+                vm.todos.push({ title: vm.newTodo, done: false });
+                vm.newTodo = "";
+            };
+            vm.clearComplate = function() {
+                vm.todos = vm.todos.filter(function(todo) {
+                    return !todo.done;
+                });
+            };
+
+            vm.doneCount = function() {
+                var temp = vm.todos.filter(function(todo) {
+                    return todo.done;
+                });
+
+                return temp.length;
+            };
+
+            vm.pretty = function() {
+                
+                return JSON.stringify(vm, undefined, 2);
+            };
+        });
+
+
+    </script>
+</head>
+    <body ng-app="app" ng-controller="todoController as vm">
+        <form name="frm" ng-submit="vm.addTodo()" >
+            <input type="text" ng-model="vm.newTodo" required ng-minlength="4" name="def" placeholder="New Todo" />
+            <span ng-show="frm.def.$pristine && frm.def.$error.required">This field is required.</span>
+
+            <button ng-disabled="frm.$invalid">Add</button>
+
+        </form>
+        <button ng-disabled="vm.doneCount() < 3" ng-click="vm.clearComplate()">Clear Complete</button>
+        <ul>
+            <li  ng-repeat="todo in vm.todos">
+                <input type="checkbox" ng-model="todo.done"  />
+                <span ng-class="{done: todo.done}">{{todo.title}}</span>     
+            </li>
+        </ul>
+<pre ng-cloak>
+{{frm | json}}
+</pre>
+      
+        
+        <pre ng-cloak>{{vm.pretty()}}</pre>
+    </body>
+</html>
