@@ -61,6 +61,7 @@
             if (!product.productId) {
                 // new product id
                 product.productId = products[products.length - 1].productId + 1;
+                products.push(product);
             } else {
                 // update product
                 for (var i = 0; i < products.length; i++) {
