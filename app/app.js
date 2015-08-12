@@ -8,6 +8,7 @@
             , "productResourceMock"
             , "ui.router"
             , "ui.mask"
+            , "ui.bootstrap"
         ]);
 
     app.config(["$stateProvider"
