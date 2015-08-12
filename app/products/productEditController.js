@@ -26,7 +26,9 @@
         }
 
         vm.submit = function() {
-            vm.product.$save();
+            vm.product.$save(function(data) {
+                toastr.success("Save successfull");
+            });
         };
 
         vm.cancel = function() {
