@@ -7,6 +7,7 @@
             "common.services"
             , "productResourceMock"
             , "ui.router"
+            , "ui.mask"
         ]);
 
     app.config(["$stateProvider"
