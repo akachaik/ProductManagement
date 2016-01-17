@@ -12,6 +12,19 @@
             , "angularCharts"
         ]);
 
+    app.config(function ($provide) {
+        $provide.decorator("$exceptionHandler",
+            ["$delegate",
+                function ($delegate) {
+                    return function (exception, cause) {
+                        exception.message = "Please contact the Help Desk! \n Message: " + exception.message;
+                        $delegate(exception, cause);
+                        alert(exception.message);
+                    };
+                }
+            ]);
+    });
+
     app.config(["$stateProvider"
                 , "$urlRouterProvider",
                 function ($stateProvider, $urlRouterProvider) {
@@ -74,7 +87,15 @@
                             resolve: {
                                 productResource: "productResource",
                                 products: function (productResource) {
-                                    return productResource.query().$promise;
+                                    return productResource.query(function (response) {
+                                        // no code needed for success
+                                    }, function (response) {
+                                        if (response.status == 404) {
+                                            alert("Error accessing resource: " + response.config.method + " " + response.config.url);
+                                        } else {
+                                            alert(response.statusText);
+                                        }
+                                    }).$promise;
                                 }
                             }
                         });
