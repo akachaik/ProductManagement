@@ -3,17 +3,23 @@
         <legend>
             Basic Product Information
         </legend>
-        <div class="form-group">
+        <div class="form-group"
+             ng-class="{'has-error': productForm.inputProductName.$invalid && 
+                                     productForm.inputProductName.$dirty}" >
             <label class="col-md-2 control-label" for="inputProductName">Product Name</label>
             <div class="col-md-4">
                 <input id="inputProductName"
+                       name="inputProductName"
                        ng-model="vm.product.productName"
                        type="text"
                        class="form-control"
                        placeholder="Product Name (requried)"
                        required />
-
             </div>
+            <span class="help-block has-error"
+                  ng-show="productForm.inputProductName.$invalid">
+                Product Name is required.
+            </span>
         </div>
         <div class="form-group">
             <label class="col-md-2 control-label" for="inputProductDescription">Description</label>
@@ -27,15 +33,22 @@
 
             </div>
         </div>
-        <div class="form-group">
+        <div class="form-group" 
+             ng-class="{'has-error': productForm.inputProductCode.$invalid && 
+                                     productForm.inputProductCode.$dirty}" >
             <label class="col-md-2 control-label" for="inputProductCode">Product Code</label>
             <div class="col-md-4">
                 <input class="form-control"
                        id="inputProductCode"
+                       name="inputProductCode"
                        ui-mask="AAA-**** (required)"
                        ng-model="vm.product.productCode" 
                        required />
             </div>
+            <span class="help-block has-error"
+                  ng-show="productForm.inputProductCode.$invalid">
+                Product Code is required.
+            </span>
         </div>
         
         <div class="form-group">
