@@ -1,4 +1,4 @@
-﻿<form name="productForm" class="form-horizontal" >
+﻿<form name="productForm" class="form-horizontal" novalidate >
     <fieldset>
         <legend>
             Basic Product Information
@@ -10,7 +10,8 @@
                        ng-model="vm.product.productName"
                        type="text"
                        class="form-control"
-                       placeholder="Product Name" />
+                       placeholder="Product Name (requried)"
+                       required />
 
             </div>
         </div>
@@ -31,8 +32,9 @@
             <div class="col-md-4">
                 <input class="form-control"
                        id="inputProductCode"
-                       ui-mask="AAA-***"
-                       ng-model="vm.product.productCode" />
+                       ui-mask="AAA-**** (required)"
+                       ng-model="vm.product.productCode" 
+                       required />
             </div>
         </div>
         
