@@ -24,10 +24,10 @@
                 "productCode": "GDN-002",
                 "releaseDate": "May 21, 2009",
                 "description": "Hammer withe 48 inch handle.",
-                "cost": 9.90,
-                "price": 19.95,
+                "cost": 20.00,
+                "price": 32.99,
                 "category": "Garden",
-                "tags": ["tool"],
+                "tags": ["barow","cart", "wheelbarrow"],
                 "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
             }
         ];

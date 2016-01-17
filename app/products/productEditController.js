@@ -3,12 +3,33 @@
 
     angular
         .module("productManagement")
-        .controller("productEditController", ["product", "$state", productEditController]);
+        .controller("productEditController", ["product", "$state", "productService", productEditController]);
 
-    function productEditController(product, $state) {
+    function productEditController(product, $state, productService) {
         var vm = this;
 
         vm.product = product;
+        vm.priceOption = "percent";
+
+        vm.marginPercent = function () {
+            return productService.calculateMarginPercent(vm.product.price,
+                                                         vm.product.cost);
+        };
+        vm.calculatePrice = function () {
+            var price = 0;
+
+            if (vm.priceOption == 'amount') {
+                price = productService.calculatePriceFromMarkupAmount(
+                    vm.product.cost, vm.markupAmount);
+            }
+
+            if (vm.priceOption == 'percent') {
+                price = productService.calculatePriceFromMarkupPercent(
+                    vm.product.cost, vm.markupPercent);
+            }
+            vm.product.price = price;
+        };
+
         vm.opened = false;
 
         if (vm.product && vm.product.productId) {
