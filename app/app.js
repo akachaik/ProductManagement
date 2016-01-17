@@ -9,6 +9,7 @@
             , "ui.router"
             , "ui.mask"
             , "ui.bootstrap"
+            , "angularCharts"
         ]);
 
     app.config(["$stateProvider"
@@ -63,6 +64,17 @@
                                     return productResource.get({
                                         productId: productId
                                     }).$promise;
+                                }
+                            }
+                        })
+                        .state("priceAnalytics", {
+                            url: "/priceAnalytics",
+                            templateUrl: "app/prices/priceAnalyticsView.html",
+                            controller: "PriceAnalyticsController",
+                            resolve: {
+                                productResource: "productResource",
+                                products: function (productResource) {
+                                    return productResource.query().$promise;
                                 }
                             }
                         });

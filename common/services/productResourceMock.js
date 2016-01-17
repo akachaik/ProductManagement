@@ -29,6 +29,102 @@
                 "category": "Garden",
                 "tags": ["barow","cart", "wheelbarrow"],
                 "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 3,
+                "productName": "Saw",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 15.00,
+                "price": 35.99,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 4,
+                "productName": "Garden Cart",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 30.00,
+                "price": 32.99,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 5,
+                "productName": "Video Game Controller",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 200.00,
+                "price": 320.99,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 6,
+                "productName": "Dell U2415",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 70.00,
+                "price": 100.00,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 7,
+                "productName": "Corsair Gaming Keyboard",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 25.00,
+                "price": 50.00,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 8,
+                "productName": "Clock",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 39.00,
+                "price": 70.00,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 9,
+                "productName": "Dell NoteBook",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 300.00,
+                "price": 500.00,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
+            },
+            {
+                "productId": 10,
+                "productName": "TV",
+                "productCode": "GDN-002",
+                "releaseDate": "May 21, 2009",
+                "description": "Hammer withe 48 inch handle.",
+                "cost": 60.00,
+                "price": 65.00,
+                "category": "Garden",
+                "tags": ["barow", "cart", "wheelbarrow"],
+                "imageUrl": "https://openclipart.org/image/2400px/svg_to_png/4793/david-benjamin-Hammer.png"
             }
         ];
 

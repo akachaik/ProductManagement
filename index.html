@@ -16,12 +16,15 @@
         <script src="app/products/productListController.js"></script>
         <script src="app/products/productEditController.js"></script>
         <script src="app/products/productDetailController.js"></script>
+        <script src="app/prices/PriceAnalyticsController.js"></script>
 
         <script src="common/services/common.services.js"></script>
         <script src="common/services/productResource.js"></script>
         <script src="common/services/productResourceMock.js"></script>
         <script src="common/services/productService.js"></script>
         <script src="Scripts/bootstrap.js"></script>
+        <script src="Scripts/d3.js"></script>
+        <script src="Scripts/angular-charts.js"></script>
 
         <link href="Content/bootstrap.css" rel="stylesheet" />
         <link href="Content/bootstrap-theme.css" rel="stylesheet" />
@@ -49,6 +52,9 @@
                         <li><a ui-sref="productList">Product List</a></li>
                         <li>
                             <a ui-sref="productEdit.info({productId: 0})"><i class="glyphicon glyphicon-plus"></i> Add Product</a>
+                        </li>
+                        <li>
+                            <a ui-sref="priceAnalytics">Price Analytics</a>
                         </li>
                     </ul>
                 </div>
