@@ -25,10 +25,14 @@
             vm.opened = !vm.opened;
         }
 
-        vm.submit = function() {
-            vm.product.$save(function(data) {
-                toastr.success("Save successfull");
-            });
+        vm.submit = function (isValid) {
+            if (isValid) {
+                vm.product.$save(function (data) {
+                    toastr.success("Save successfull");
+                });
+            } else {
+                alert("Please correct the validation errors first.")
+            }
         };
 
         vm.cancel = function() {
